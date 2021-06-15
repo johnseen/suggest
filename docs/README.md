@@ -58,8 +58,49 @@
 ⑦ 可以看到所有盘符里只有F盘有分页文件，点击【确定】。
 
 ![avatar](./assets/无分页.png)
+
 ⑧ 重新启动服务器，再次看到F盘的空间有变化了，被占用的就是分页文件，也就是虚拟内存。
 
 ![avatar](./assets/生效.png)
 
 **本文部分图片来自https://blog.csdn.net/meigang2012/article/details/77505485**
+
+# 禁用Resin热部署
+
+<a href="assets/附件1.docx" target="_blank">stophotdeploy.jar</a>
+## Resin4热部署补丁包操作
+
+1、停OA服务
+
+2、将附件stophotdeploy.jar 更新到生产Resin目录下。
+
+3、修改Resin的配置文件resin.properties（相对路径 Resin/conf/resin.properties）
+
+4、将resin.properties 内的jvm_args：参数内容上，加上  -javaagent:stophotdeploy.jar
+
+例如：
+
+   ``` jvm_args  : -javaagent:stophotdeploy.jar -Xmx5500m -Xms5500m -XX:ParallelGCThreads=20 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+DisableExplicitGC -javaagent:wagent.jar  ```
+ 
+5、启动oa服务即可
+
+
+## Resin3热部署补本包操作
+1、停OA服务
+
+2、将附件stophotdeploy.jar 更新到生产Resin目录下。
+
+3、修改Resin的配置文件resin.conf（相对路径 Resin/conf/resin.conf）
+
+4、在resin.conf 内的<jvm-arg>-XX:+DisableExplicitGC</jvm-arg>  下一行，加上 <jvm-arg>-javaagent:stophotdeploy.jar</jvm-arg>
+
+例如：
+
+      <jvm-arg>-XX:ParallelGCThreads=20</jvm-arg>
+      <jvm-arg>-XX:+UseConcMarkSweepGC</jvm-arg>
+      <jvm-arg>-XX:+UseParNewGC</jvm-arg>
+      <jvm-arg>-XX:+DisableExplicitGC</jvm-arg>
+	  <jvm-arg>-javaagent:stophotdeploy.jar</jvm-arg>
+	  
+5、启动oa服务即可
+
