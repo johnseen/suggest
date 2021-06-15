@@ -32,35 +32,34 @@
 
 ① 鼠标右击【此电脑】图标，弹出菜单选择【属性】。
 
-![avatar](https://img-blog.csdn.net/20170823142933426)
+![avatar](./assets/此电脑.png)
 
 ② 弹出系统窗口,点击左边子菜单【高级系统设置】。
 
-![avatar](https://img-blog.csdn.net/20170823143043894)
+![avatar](./assets/高级系统设置.png)
 
 ③ 系统属性窗口点击【高级】子菜单，点击性能下的【设置】。
 
-![avatar](https://img-blog.csdn.net/20170823143323693)
+![avatar](./assets/高级.png)
 
 ④ 在虚拟内存窗口中，首先取消自动管理所有驱动器的分页大小，点击最后一个分区F盘，选择自定义大小，初始大小和最大值都填入相同的数字，12*1024*2。点击【设置】。
 
-![avatar](https://img-blog.csdn.net/20170823143535038)
+![avatar](./assets/更改.png)
 
 ⑤ 已经设置了F盘的虚拟内存，就可以取消C盘的虚拟内存了，选择C盘，选择无分页文件，点击【设置】。
 
 
-![avatar](https://img-blog.csdn.net/20170823143842671)
+![avatar](./assets/c无分页.png)
 
 ⑥ 提示分页文件小于800MB会发生系统错误，由于设置了F盘足够大的虚拟内存，可以忽略提示，点击【是】。
 
-![avatar](https://img-blog.csdn.net/20170823144145086)
+![avatar](./assets/报错.png)
 
 ⑦ 可以看到所有盘符里只有F盘有分页文件，点击【确定】。
 
-![avatar](https://img-blog.csdn.net/20170823144342576)
-
+![avatar](./assets/无分页.png)
 ⑧ 重新启动服务器，再次看到F盘的空间有变化了，被占用的就是分页文件，也就是虚拟内存。
 
-![avatar](https://img-blog.csdn.net/20170823144525559)
+![avatar](./assets/生效.png)
 
 **本文部分图片来自https://blog.csdn.net/meigang2012/article/details/77505485**
