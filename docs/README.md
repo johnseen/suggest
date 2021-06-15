@@ -67,7 +67,7 @@
 
 # 禁用Resin热部署
 
-<a href="assets/附件1.docx" target="_blank">stophotdeploy.jar</a>
+<a href="assets/stophotdeploy.jar" target="_blank">stophotdeploy.jar</a>
 ## Resin4热部署补丁包操作
 
 1、停OA服务
