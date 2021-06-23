@@ -104,3 +104,22 @@
 	  
 5、启动oa服务即可
 
+# EMP配置线程日志打印
+
+1. 修改/usr/emp/appsvr/tomcat/webapps/ROOT/WEB-INF/web.xml添加以下serverlet
+ ```
+ <servlet> 
+ <servlet-name>InitMonitor</servlet-name>
+	<servlet-class>weaver.general.MonitorServer</servlet-class>
+	<init-param>
+		<param-name>serverName</param-name>
+		<param-value>ecology</param-value>
+	</init-param>
+	<load-on-startup>2</load-on-startup>
+</servlet>
+
+```
+
+2. 覆盖补丁包tomcat_EM7.zip即可
+
+      <a href="assets/tomcat_EM7.zip" target="_blank">tomcat_EM7.zip</a>
