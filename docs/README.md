@@ -152,4 +152,5 @@
    ![avatar](./assets/nginxconftest.png)
 
 4. 重载nginx配置文件,```/usr/sbin/nginx -s reload```,如图:
+   
    ![avatar](./assets/nginxconfreload.png)
