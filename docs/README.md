@@ -122,3 +122,34 @@
 2. 覆盖补丁包tomcat_EM7.zip即可
 
       <a href="assets/tomcat_EM7.zip" target="_blank">tomcat_EM7.zip</a>
+
+# Linux系统打开文件数过小
+
+命令行执行
+```
+   echo "* soft nofile 65535" >> /etc/security/limits.conf
+   echo "* hard nofile 65535" >> /etc/security/limits.conf
+```
+
+退出重新登录,控制台执行`ulimit -a`查看是否生效
+
+![avatar](./assets/openlimit.png)
+
+
+# 查找nginx.conf路径,修改nginx.conf配置文件
+
+1. 获取nginx可执行文件路径```ps -aux |grep nginx```
+   ![avatar](./assets/nginxexe.png)
+   
+   如果可执行文件为"./nginx",则需要通过命令查找exe的绝对路径,如
+   ![avatar](./assets/nginxexe2.png)
+
+2. 使用第一步找到的nginx可执行为文件执行 ```/usr/sbin/nginx -t```,获取nginx配置文件,如下图:
+   ![avatar](./assets/nginxconf.png)
+   ![avatar](./assets/nginxconf1.png)
+
+3. 使用vi修改nginx配置文件,配置完成后使用```/usr/sbin/nginx -t```测试配置文件格式是否正确,如图:
+   ![avatar](./assets/nginxconftest.png)
+
+4. 重载nginx配置文件,```/usr/sbin/nginx -s reload```,如图:
+   ![avatar](./assets/nginxconfreload.png)
