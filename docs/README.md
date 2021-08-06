@@ -4,7 +4,9 @@
 
 # 配置Resin url编码
 1. 修改resin.conf或resin.xml
-2. 去掉 ```<character-encoding>utf-8</character-encoding>``` 注释
+2. 在```<cluster id="app">```下新加```<url-character-encoding>utf-8</url-character-encoding>``` 如下图:
+![add_character.png](./assets/url_character.png)
+
 
 
 # 配置主机名到IP的解析
