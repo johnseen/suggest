@@ -2,14 +2,14 @@
 
 > An awesome project.
 
-# 配置Resin url编码
+# 设置URL编码
 1. 修改resin.conf或resin.xml
 2. 在```<cluster id="app">```下新加```<url-character-encoding>utf-8</url-character-encoding>``` 如下图:
 ![add_character.png](./assets/url_character.png)
 
 
 
-# 配置主机名到IP的解析
+# Linux主机名解析
 1. 使用 vi 编辑器打开 /etc/hosts 文件
    
     ```vi /etc/hosts```
@@ -17,7 +17,7 @@
    
    ``` 192.168.80.157 ecology```
 
-# TIME-WAIT连接数过多
+# TIME-WAIT连接数
 
 1. 设置nginx upstram 中keepalive 300;
    
@@ -30,7 +30,14 @@
    ```
 3. 参考图片![nginx-keepalive.png](./assets/nginx-keepalive.png)
 
-# Windows服务器配置交换内存
+# Linux服务器配置虚拟内存
+
+配置Linux虚拟内存,参考以下链接
+
+ [Linux虚拟内存](https://blog.csdn.net/zstack_org/article/details/53258588)
+
+
+# Windows服务器配置虚拟内存
 
 ① 鼠标右击【此电脑】图标，弹出菜单选择【属性】。
 
@@ -125,14 +132,13 @@
 
       <a href="assets/tomcat_EM7.zip" target="_blank">tomcat_EM7.zip</a>
 
-# Linux系统打开文件数过小
+# Linux系统打开文件数
 
 命令行执行
 ```
    echo "* soft nofile 65535" >> /etc/security/limits.conf
    echo "* hard nofile 65535" >> /etc/security/limits.conf
 ```
-
 退出重新登录,控制台执行`ulimit -a`查看是否生效
 
 ![avatar](./assets/openlimit.png)
@@ -156,3 +162,57 @@
 4. 重载nginx配置文件,```/usr/sbin/nginx -s reload```,如图:
    
    ![avatar](./assets/nginxconfreload.png)
+
+# NTP时间同步
+
+
+1. 判断系统是否配置了ntp,执行命令```rpm -qa |grep ntp |wc -l```如果结果大于1,证明系统已安装ntpdate,如果结果为0证明未安装ntp,请使用命令```yum install -y ntpdate```
+   
+   ![avatar](./assets/ntp2.png)
+
+2. 配置NTP时间同步
+   1.  使用命令```ping www.baidu.com```判断客户是否可以上外网,如果客户上外网,直接配置阿里云ntp时间同步
+       
+       ![avatar](./assets/baidu.png)
+       ```crontab -e ```,按```i```键输入
+       
+       ```*/10 * * * * /usr/sbin/ntpdate ntp.aliyun.com```
+
+       ![avatar](./assets/ntpdate.png)
+   2. 如果不能上外网,询问客户是否内部有时间同步服务器,如果有,则配置内部NTP服务器,如果没有,放弃ntp时间同步
+      
+      ```crontab -e ```,按```i```键输入,请替换下面IP 10.10.25.25为客户内部NTP时间同步服务器
+      
+       ```*/10 * * * * /usr/sbin/ntpdate 10.10.25.25```
+
+# Resin XMX内存
+
+1. Resin配置文件
+   
+        Resin4 配置文件resin.properties（相对路径 Resin/conf/resin.properties）
+
+        Resin3 配置文件resin.conf（相对路径 Resin/conf/resin.conf）
+
+2. 修改XMX内存,系统内存小于8G,配置3550,大于8G小于16G,配置5550,大于16G配置8550,如下图:
+ 
+   ![avatar](./assets/resinxmx.png)
+
+
+# SQL缓存
+
+修改配置文件ecology/WEB-INF/prop/initCache.properties,设置iscache=1,如下图:
+
+![avatar](./assets/sqlcache.png)
+
+
+# DocSearch
+
+修改配置文件ecology/WEB-INF/prop/doc_full_search.properties配置文件，配置use_full_search=1 default_treenode=1,如下图:
+
+![avatar](./assets/DocSearch.png)
+
+# 安全包自动更新
+
+参考链接:
+
+[ecology安全包](https://www.e-cology.com.cn/spa/document/index.jsp?imagefileId=11804323&id=6589629&router=1#/main/document/detail?_key=zlt82l)
