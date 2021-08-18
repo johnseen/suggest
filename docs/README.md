@@ -174,6 +174,7 @@
    1.  使用命令```ping www.baidu.com```判断客户是否可以上外网,如果客户上外网,直接配置阿里云ntp时间同步
        
        ![avatar](./assets/baidu.png)
+       
        ```crontab -e ```,按```i```键输入
        
        ```*/10 * * * * /usr/sbin/ntpdate ntp.aliyun.com```
