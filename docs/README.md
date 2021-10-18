@@ -216,4 +216,6 @@
 
 参考链接:
 
-[ecology安全包](https://www.weaver.com.cn/cs/securityDownload.html#)
+[ecology安全包下载地址](https://www.weaver.com.cn/cs/securityDownload.html#)
+
+[ecology安全包配置说明](https://www.e-cology.com.cn/spa/document/index.jsp?imagefileId=11804323&id=6589629&router=1#/main/document/detail?_key=zlt82l)
