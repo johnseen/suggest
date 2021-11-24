@@ -21,7 +21,7 @@
 
 1. 设置nginx upstram 中keepalive 300;
    
-   ``` keepalive 300; ```
+   ``` keepalive 3000; ```
 2. 配置proxy_http_version 1.1; proxy_set_header Connection "Keep-Alive";
    
    ``` 
