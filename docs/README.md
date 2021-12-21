@@ -219,3 +219,16 @@
 [ecology安全包下载地址](https://www.weaver.com.cn/cs/securityDownload.html#)
 
 [ecology安全包配置说明](https://www.e-cology.com.cn/spa/document/index.jsp?imagefileId=11804323&id=6589629&router=1#/main/document/detail?_key=zlt82l)
+
+# Ecode版本
+
+需要提交流程至云商店组同事,升级Ecode至最新版本
+
+# Redis优化
+
+升级redis优化包
+<a href="assets/redis session优化.zip" target="_blank">redis session优化.zip</a>
+
+# MemMonitor优化
+
+提交流程至性能组同事出包解决,修改ecology/WEB-INF/classes/weaver/monitor/monitor/MemMonitor.class
