@@ -231,4 +231,5 @@
 
 # MemMonitor优化
 
-提交流程至性能组同事出包解决,修改ecology/WEB-INF/classes/weaver/monitor/monitor/MemMonitor.class
+提交流程至性能组同事出包解决,修改ecology/src/weaver/monitor/monitor/MemMonitor.java
+![avatar](./assets/memMonitor.png)
