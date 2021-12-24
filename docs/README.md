@@ -222,8 +222,8 @@
 
 # Ecode版本
 
-需要提交流程至云商店组同事,升级Ecode至最新版本
-
+升级Ecode至最新版本
+[Ecode下载地址](https://e-cloudstore.com/files/ecology_dev.zip)
 # Redis优化
 
 升级redis优化包
