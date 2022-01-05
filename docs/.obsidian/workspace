@@ -7,11 +7,8 @@
         "id": "b306cc24efbff4db",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -98,6 +92,8 @@
   },
   "active": "b306cc24efbff4db",
   "lastOpenFiles": [
+    "Pasted image 20220105113935.png",
+    "Pasted image 20220105113919.png",
     "README.md"
   ]
 }
