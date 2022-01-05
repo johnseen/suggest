@@ -19,11 +19,13 @@
 ![Pasted_image_20220105120949.png](./assets/Pasted_image_20220105120949.png)
 
 3.  配置文件说明如下
+   
 ![Pasted_image_20220105120956.png](./assets/Pasted_image_20220105120956.png)
 
 4.  配置完成开始运行start.bat如下：
 
 ![Pasted_image_20220105121007.png](./assets/Pasted_image_20220105121007.png)
+
 ![Pasted_image_20220105121020.png](./assets/Pasted_image_20220105121020.png)
 
 5. 运行完成后，会在本地weaver路径生成一个”客户名”_Windows2021-08-05-13-31_192.168.81.75_WEAVERZHE.json,请将本文件，附到巡检流程里面
@@ -32,8 +34,8 @@
 
 6. SQLserver巡检说明`注意一定要放置到SQLServer主机上,不能放置到OA主机上`
 
-
 ![Pasted_image_20220105121035.png](./assets/Pasted_image_20220105121035.png)
+
 
 `因服务器负载和配置有差异，bat窗口的运行时间可能会长会短，请耐心等待，最长不超过5分钟，如果无响应请按回车键,oa巡检,请将巡检脚本放置到oa主机上,sqlserver巡检请将巡检脚本放置到sqlserver主机上`
   ### Linux版本
@@ -41,55 +43,85 @@
    **注意所有服务器都必须上传巡检脚本,然后根据主机角色选择对应的菜单,比如oracle主机,先上传巡检脚本,然后执行menu.sh,选择oracle巡检**
   #### OA巡检
   1. 上传巡检脚本到服务器,任意位置(建议/tmp),创建巡检目录并解压
+  
   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 使用shell运行脚本 `sh menu.sh`,选择需要巡检的项目,暂时支持单主机巡检,OA巡检,EMP巡检(`EM7 不支持老EM,比如EM6,Ebridge,emessage等`),Redis巡检,Nginx巡检,Oracle巡检,MySQL巡检,单OA巡检(`适用于非Resin中间件,比如tomcat,东方通等`)
+  
   ![memu.png](./assets/menu.png)
+  
   3. 选择`2`,执行OA巡检,如下:
+   
    ![oainspect.png](./assets/oainspect.png)
+
   `输入oa,resin,jdk路径,如果与default一致,回车即可`
+
   ![oashow.png](./assets/oashow.png)
+
   4. 将文件附在巡检流程里面,文件名应为`客户名_Inspection-内网IP-时间.txt`,比如`中国交通信息科技集团有限公司_Inspection-10.100.3.2-202110121449.txt`
+  
   ![oaresult.png](./assets/oaresult.png)
 
   #### EMP巡检
+
   **注意,EMP会自动巡检EMP所用Redis,MySQL,请勿重复执行巡检脚本,巡检redis,mysql**
+
   1. 上传巡检脚本到EMP服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 执行`sh menu.sh`,选择`3`,执行EMP巡检,输入安装路径,默认为`/usr/emp`
+  
   ![emptest.png](./assets/emptest.png)
 
   #### Redis巡检
   1. 上传巡检脚本到Redis服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 执行`sh menu.sh`,选择`4`,执行Redis巡检,输入Redis端口,密码
+  
   ![redisinspect.png](./assets/redisinspect.png)
 
   #### Nginx巡检
    1. 上传巡检脚本到Nginx服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 执行`sh menu.sh`,选择`5`,执行Nginx巡检,输入`Nginx可执行文件路径`
+  
   ![nginxinspect.png](./assets/nginxinspect.png)
 
   ### Oracle巡检
   1. 上传巡检脚本到Oracle服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 执行`sh menu.sh`,选择`6`,执行Oracle巡检,输入`OA使用的用户名`
+  
   ![oracleinspect.png](./assets/oracleinspect.png)
 
   ### MySQL巡检
   1. 上传巡检脚本到MySQL服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 执行`sh menu.sh`,选择`7`,执行MySQL巡检,输入`参数(账号,密码,主机,端口)`
+  
   ![mysqlinspect.png](./assets/mysqlinspect.png)
 
   ### Simple-Ecology巡检(适用于非resin中间件)
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
   2. 执行`sh menu.sh`,选择`8`,执行OA巡检,输入`参数(ecology路径,jdk路径,oa端口)`
+  
   ![simple-oa.png](./assets/simple-oa.png)
 # 设置URL编码
 1. 修改resin.conf或resin.xml
 2. 在```<cluster id="app">```下新加```<url-character-encoding>utf-8</url-character-encoding>``` 如下图:
+
 ![add_character.png](./assets/url_character.png)
 
 
