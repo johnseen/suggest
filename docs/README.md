@@ -44,6 +44,7 @@
 
    `注意所有服务器都必须上传巡检脚本,然后根据主机角色选择对应的菜单,比如oracle主机,先上传巡检脚本,然后执行menu.sh,选择oracle巡检`
   #### OA巡检
+
   1. 上传巡检脚本到服务器,任意位置(建议/tmp),创建巡检目录并解压
   
   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -77,6 +78,7 @@
   ![emptest.png](./assets/emptest.png)
 
   #### Redis巡检
+
   1. 上传巡检脚本到Redis服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -86,6 +88,7 @@
   ![redisinspect.png](./assets/redisinspect.png)
 
   #### Nginx巡检
+
    1. 上传巡检脚本到Nginx服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -95,6 +98,7 @@
   ![nginxinspect.png](./assets/nginxinspect.png)
 
   ####  Oracle巡检
+
   1. 上传巡检脚本到Oracle服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -104,6 +108,7 @@
   ![oracleinspect.png](./assets/oracleinspect.png)
 
   ####  MySQL巡检
+
   1. 上传巡检脚本到MySQL服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -113,6 +118,7 @@
   ![mysqlinspect.png](./assets/mysqlinspect.png)
 
   #### Simple-Ecology巡检(适用于非resin中间件)
+
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -121,6 +127,7 @@
   
   ![simple-oa.png](./assets/simple-oa.png)
 # 设置URL编码
+
 1. 修改resin.conf或resin.xml
 2. 在```<cluster id="app">```下新加```<url-character-encoding>utf-8</url-character-encoding>``` 如下图:
 
