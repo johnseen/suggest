@@ -49,7 +49,7 @@
   2. 使用shell运行脚本 `sh menu.sh`,选择需要巡检的项目,暂时支持单主机巡检,OA巡检,EMP巡检(`EM7 不支持老EM,比如EM6,Ebridge,emessage等`),Redis巡检,Nginx巡检,Oracle巡检,MySQL巡检,单OA巡检(`适用于非Resin中间件,比如tomcat,东方通等`)
   
   ![memu.png](./assets/menu.png)
-  
+
   3. 选择`2`,执行OA巡检,如下:
    
    ![oainspect.png](./assets/oainspect.png)
@@ -92,7 +92,7 @@
   
   ![nginxinspect.png](./assets/nginxinspect.png)
 
-  ### Oracle巡检
+  ####  Oracle巡检
   1. 上传巡检脚本到Oracle服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -101,7 +101,7 @@
   
   ![oracleinspect.png](./assets/oracleinspect.png)
 
-  ### MySQL巡检
+  ####  MySQL巡检
   1. 上传巡检脚本到MySQL服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -110,7 +110,7 @@
   
   ![mysqlinspect.png](./assets/mysqlinspect.png)
 
-  ### Simple-Ecology巡检(适用于非resin中间件)
+  #### Simple-Ecology巡检(适用于非resin中间件)
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
