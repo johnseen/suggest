@@ -66,7 +66,7 @@
 
   #### EMP巡检
 
-  **注意,EMP会自动巡检EMP所用Redis,MySQL,请勿重复执行巡检脚本,巡检redis,mysql**
+  `注意,EMP会自动巡检EMP所用Redis,MySQL,请勿重复执行巡检脚本,巡检redis,mysql`
 
   1. 上传巡检脚本到EMP服务器,任意位置(建议/tmp),创建巡检目录并解压
    
