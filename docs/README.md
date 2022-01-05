@@ -2,6 +2,39 @@
 
 > An awesome project.
 
+# 巡检工具使用说明
+## 巡检工具下载地址(**需内网访问**)
+1. [windows](http://192.168.80.80:85/windows-inspect.zip)
+2. [linux](http://192.168.80.80:85/Linux-inspect.tar.gz)
+
+## 使用指南
+### windows版本        
+
+1. 将巡检工具放置在ecology同级目录下
+
+![[Pasted image 20220105113447.png]]
+
+2. 解压巡检工具，并修改配置文件
+
+![[Pasted image 20220105113510.png]]
+
+3.  配置文件说明如下
+![[Pasted image 20220105113536.png]]
+
+4.  配置完成开始运行start.bat如下：
+![[Pasted image 20220105113705.png]]
+![[Pasted image 20220105113811.png]]
+
+5.   运行完成后，会在本地weaver路径生成一个”客户名”_Windows2021-08-05-13-31_192.168.81.75_WEAVERZHE.json,请将本文件，附到巡检流程里面
+![[Pasted image 20220105113919.png]]
+
+6. SQLserver巡检说明
+
+    	 注意一定要放置到SQLServer主机上,不能放置到OA主机上
+
+![[Pasted image 20220105113935.png]]
+
+          因服务器负载和配置有差异，bat窗口的运行时间可能会长会短，请耐心等待，最长不超过5分钟，如果无响应请按回车键,oa巡检,请将巡检脚本放置到oa主机上,sqlserver巡检请将巡检脚本放置到sqlserver主机上
 # 设置URL编码
 1. 修改resin.conf或resin.xml
 2. 在```<cluster id="app">```下新加```<url-character-encoding>utf-8</url-character-encoding>``` 如下图:
