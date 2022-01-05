@@ -7,8 +7,11 @@
         "id": "b306cc24efbff4db",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +84,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           }
         ]
@@ -92,8 +98,8 @@
   },
   "active": "b306cc24efbff4db",
   "lastOpenFiles": [
+    "README.md",
     "Pasted image 20220105113935.png",
-    "Pasted image 20220105113919.png",
-    "README.md"
+    "Pasted image 20220105113919.png"
   ]
 }
