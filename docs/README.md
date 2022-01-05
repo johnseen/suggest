@@ -27,7 +27,7 @@
 ![Pasted image 20220105121020.png](./assets/Pasted image 20220105121020.png)
 5.   运行完成后，会在本地weaver路径生成一个”客户名”_Windows2021-08-05-13-31_192.168.81.75_WEAVERZHE.json,请将本文件，附到巡检流程里面
 
-![Pasted image 20220105121027.png](./assets/Pasted image 20220105121027.png])
+![Pasted_image_20220105121027.png](./assets/Pasted_image_20220105121027.png])
 
 6. SQLserver巡检说明`注意一定要放置到SQLServer主机上,不能放置到OA主机上`
 
