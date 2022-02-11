@@ -4,8 +4,8 @@
 
 # 巡检工具使用说明 {docsify-ignore-all}
 ## 巡检工具下载地址(**需内网访问**)
-1. [windows](http://192.168.80.80:85/windows-inspect.zip)
-2. [linux](http://192.168.80.80:85/Linux-inspect.tar.gz)
+1. [windows](http://10.10.27.160:85/Windows-inspect.zip)
+2. [linux](http://10.10.27.160:85/Linux-inspect.tar.gz)
 
 ## 使用指南
 ### windows版本        
@@ -145,17 +145,19 @@
 
 # TIME-WAIT连接数
 
-1. 设置nginx upstram 中keepalive 300;
+1. 设置nginx upstram 中keepalive 3000;
    
    ``` keepalive 3000; ```
-2. 配置proxy_http_version 1.1; proxy_set_header Connection "Keep-Alive";
+2. 配置proxy_http_version 1.1; proxy_set_header Connection "";
    
    ``` 
       proxy_http_version 1.1;
-      proxy_set_header Connection "Keep-Alive";
+      proxy_set_header Connection "";
    ```
-3. 参考图片![nginx-keepalive.png](./assets/nginx-keepalive.png)
+3. 参考图片
 
+   ![nginx3000.png](./assets/nginx3000.png)
+   ![nginxkeep.png](./assets/nginxkeep.png)
 # Linux服务器配置虚拟内存
 
 配置Linux虚拟内存,参考以下链接
