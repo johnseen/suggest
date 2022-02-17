@@ -340,7 +340,7 @@
 
 ![avatar](./assets/DocSearch.png)
 
-# 安全包自动更新
+# 安全包状态（升级最新安全包）
 
 参考链接:
 
@@ -361,3 +361,34 @@
 
 提交流程至性能组同事出包解决,修改ecology/src/weaver/monitor/monitor/MemMonitor.java
 ![avatar](./assets/memMonitor.png)
+
+# Linux 虚拟内存配置（内核参数）
+
+1. 修改配置文件 `/etc/sysctl.conf`中`vm.swappiness=30`
+![avatar](./assets/vimswap.png)
+![avatar](./assets/swapniss.png)
+2. 命令行执行`sysctl -p`使配置生效
+![avatar](./assets/swapuse.png)
+
+
+
+# Linux TCP 重用配置
+
+   `当net.ipv4.tcp_tw_reuse设置为1时，会导致网络连接被拒绝`
+
+1. 修改配置文件 `/etc/sysctl.conf`中`net.ipv4.tcp_tw_reuse=0`
+
+![avatar](./assets/changereuse.png)
+2. 命令行执行`sysctl -p`使配置生效
+![avatar](./assets/reusee.png)
+
+# Linux TCP 快速回收
+
+   `当net.ipv4.tcp_tw_recycle设置为1时，会导致网络连接被拒绝`
+
+1. 修改配置文件 `/etc/sysctl.conf`中`net.ipv4.tcp_tw_recycle=0`
+
+![avatar](./assets/changerecycle.png)
+
+2. 命令行执行`sysctl -p`使配置生效
+![avatar](./assets/recyclee.png)
