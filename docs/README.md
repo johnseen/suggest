@@ -4,8 +4,8 @@
 
 # 巡检工具使用说明 {docsify-ignore-all}
 ## 巡检工具下载地址(**需内网访问**)
-1. [windows](http://home.sunzhe.cc:86//Windows-inspect.zip)
-2. [linux](http://home.sunzhe.cc:86//Linux-inspect.tar.gz)
+1. [windows](https://home.sunzhe.cc:86//Windows-inspect.zip)
+2. [linux](https://home.sunzhe.cc:86//Linux-inspect.tar.gz)
 
 ## 使用指南
 ### windows版本        
