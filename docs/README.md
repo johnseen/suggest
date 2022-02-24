@@ -8,7 +8,7 @@
 2. [linux](https://home.sunzhe.cc:86//Linux-inspect.tar.gz)
 
 ## 使用指南
-### windows版本        
+### windows版本
 
 `不支持windows 2008,只支持2012以上操作系统`
 
@@ -21,7 +21,7 @@
 ![Pasted_image_20220105120949.png](./assets/Pasted_image_20220105120949.png)
 
 3.  配置文件说明如下
-   
+
 ![Pasted_image_20220105120956.png](./assets/Pasted_image_20220105120956.png)
 
 4.  配置完成开始运行start.bat如下：
@@ -365,9 +365,13 @@
 # Linux 虚拟内存配置（内核参数）
 
 1. 修改配置文件 `/etc/sysctl.conf`中`vm.swappiness=30`
+
 ![avatar](./assets/vimswap.png)
+
 ![avatar](./assets/swapniss.png)
+
 2. 命令行执行`sysctl -p`使配置生效
+
 ![avatar](./assets/swapuse.png)
 
 
@@ -379,7 +383,9 @@
 1. 修改配置文件 `/etc/sysctl.conf`中`net.ipv4.tcp_tw_reuse=0`
 
 ![avatar](./assets/changereuse.png)
+
 2. 命令行执行`sysctl -p`使配置生效
+
 ![avatar](./assets/reusee.png)
 
 # Linux TCP 快速回收
@@ -391,4 +397,5 @@
 ![avatar](./assets/changerecycle.png)
 
 2. 命令行执行`sysctl -p`使配置生效
+
 ![avatar](./assets/recyclee.png)
