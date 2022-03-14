@@ -3,9 +3,9 @@
 > An awesome project.
 
 # 巡检工具使用说明 {docsify-ignore-all}
-## 巡检工具下载地址
-1. [windows](https://file.e-cology.com.cn/202203/T/cbd29e45-95bb-4b63-9e1f-71690e870046.wfile?AccessKeyId=PAS2RCEK8Y1R6TMNENDC&Expires=1647225610&response-content-disposition=attachment%3Bfilename%3Dwindows-inspect.zip&response-content-type=application%2Foctet-stream&Signature=IoScluX58KkwAxYZQo6Vzc%2BI2rY%3D&fileid=18115205)
-2. [linux](https://file.e-cology.com.cn/202203/W/3f8a28ea-f6ad-43aa-a522-10c7775437c0.wfile?AccessKeyId=PAS2RCEK8Y1R6TMNENDC&Expires=1647225318&response-content-disposition=attachment%3Bfilename%3DLinux-inspect.tar.gz&response-content-type=application%2Foctet-stream&Signature=LOK3eB%2BOyI5uOCDu1chQvtQWp6U%3D&fileid=18115012)
+## 巡检工具下载地址(**需内网访问**)
+1. [windows](http://10.10.27.160:85//Windows-inspect.zip)
+2. [linux](http://10.10.27.160:85//Linux-inspect.tar.gz)
 
 ## 使用指南
 ### windows版本
