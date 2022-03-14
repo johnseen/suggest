@@ -4,7 +4,7 @@
 
 # 巡检工具使用说明 {docsify-ignore-all}
 ## 巡检工具下载地址(**因安全问题,需内网访问**)
-1. [windows](http://10.10.27.160:85//Windows-inspect.zip)
+1. [windows](http://10.10.27.160:85//windows-inspect.zip)
 2. [linux](http://10.10.27.160:85//Linux-inspect.tar.gz)
 
 ## 使用指南
