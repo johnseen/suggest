@@ -3,9 +3,9 @@
 > An awesome project.
 
 # 巡检工具使用说明 {docsify-ignore-all}
-## 巡检工具下载地址(**因安全问题,需内网访问**)
-1. [windows](http://10.10.27.160:85//windows-inspect.zip)
-2. [linux](http://10.10.27.160:85//Linux-inspect.tar.gz)
+## 巡检工具下载地址
+1. [windows](https://home.sunzhe.cc:89/d/windows-inspect.zip)
+2. [linux](https://home.sunzhe.cc:89/d/Linux-inspect.tar.gz)
 
 ## 使用指南
 ### windows版本
