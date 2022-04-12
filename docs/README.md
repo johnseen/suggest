@@ -362,6 +362,27 @@
 提交流程至性能组同事出包解决,修改ecology/src/weaver/monitor/monitor/MemMonitor.java
 ![avatar](./assets/memMonitor.png)
 
+# E9限流包
+
+升级E9限流包
+[限流包](https://home.sunzhe.cc:89/d/应用限流最终版.zip)
+
+# E9防串号
+
+升级E9防串号补丁包
+[防串号](https://home.sunzhe.cc:89/d/e9防超时及串号最终版final.zip)
+
+# E9用户组织画像
+
+如果未启用非标组织画像菜单，请在后台管理页面禁用如下计划任务
+[组织画像启用关闭SQL](https://home.sunzhe.cc:89/d/E9组织画像计划任务处理.rar)
+
+# E9Redis大key
+
+升级Redis大key补丁包
+[Redis大key补丁包](https://home.sunzhe.cc:89/d/ecology-redisbigkey.rar)
+
+
 # Linux 虚拟内存配置（内核参数）
 
 1. 修改配置文件 `/etc/sysctl.conf`中`vm.swappiness=30`
