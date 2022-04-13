@@ -379,8 +379,9 @@
 
 # E9Redis大key
 
+`请确保已经更新过Redis优化包`
 升级Redis大key补丁包
-[Redis大key补丁包](https://home.sunzhe.cc:89/d/ecology-redisbigkey.rar)
+[Redis大key补丁包](https://home.sunzhe.cc:89/d/解决大key以及耗性能key优化包ecology.zip)
 
 # Tomcat资源缓存
 
