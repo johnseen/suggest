@@ -382,6 +382,10 @@
 升级Redis大key补丁包
 [Redis大key补丁包](https://home.sunzhe.cc:89/d/ecology-redisbigkey.rar)
 
+# Tomcat资源缓存
+
+修改`/usr/emp/appsvr/tomcat/conf/context.xml`
+![](https://home.sunzhe.cc:88/2022/04/13/4bd596764ecc2.png)
 
 # Linux 虚拟内存配置（内核参数）
 
