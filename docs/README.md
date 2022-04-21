@@ -124,7 +124,7 @@
   ![simple-oa.png](https://home.sunzhe.cc:88/2022/04/18/80cdd55fc5c87.png)
 
 ## **巡检修复建议**
-## 设置URL编码
+### 设置URL编码
 
 1. 修改resin.conf或resin.xml
 2. 在```<cluster id="app">```下新加```<url-character-encoding>utf-8</url-character-encoding>``` 如下图:
@@ -133,7 +133,7 @@
 
 
 
-## Linux主机名解析
+### Linux主机名解析
 1. 使用 vi 编辑器打开 /etc/hosts 文件
    
     ```vi /etc/hosts```
@@ -141,7 +141,7 @@
    
    ``` 192.168.80.157 ecology```
 
-## TIME-WAIT连接数
+### TIME-WAIT连接数
 
 1. 设置nginx upstram 中keepalive 3000;
    
@@ -156,14 +156,14 @@
 
    ![nginx3000.png](https://home.sunzhe.cc:88/2022/04/18/aaaa78d4dbebc.png)
    ![nginxkeep.png](https://home.sunzhe.cc:88/2022/04/18/6c8420a771c93.png)
-## Linux服务器配置虚拟内存
+### Linux服务器配置虚拟内存
 
 配置Linux虚拟内存,参考以下链接
 
  [Linux虚拟内存](https://blog.csdn.net/zstack_org/article/details/53258588)
 
 
-## Windows服务器配置虚拟内存
+### Windows服务器配置虚拟内存
 
 ① 鼠标右击【此电脑】图标，弹出菜单选择【属性】。
 
@@ -200,11 +200,11 @@
 
 **本文部分图片来自https://blog.csdn.net/meigang2012/article/details/77505485**
 
-## 禁用Resin热部署
+### 禁用Resin热部署
 
 <a href="assets/stophotdeploy.jar" target="_blank">stophotdeploy.jar</a>
 
-### Resin4热部署补丁包操作
+#### Resin4热部署补丁包操作
 
 1、停OA服务
 
@@ -221,7 +221,7 @@
 5、启动oa服务即可
 
 
-### Resin3热部署补本包操作
+#### Resin3热部署补本包操作
 1、停OA服务
 
 2、将附件stophotdeploy.jar 更新到生产Resin目录下。
@@ -240,7 +240,7 @@
 	  
 5、启动oa服务即可
 
-## EMP配置线程日志打印
+### EMP配置线程日志打印
 
 1. 修改/usr/emp/appsvr/tomcat/webapps/ROOT/WEB-INF/web.xml添加以下serverlet
  ```
@@ -259,7 +259,7 @@
 
       <a href="assets/tomcat_EM7.zip" target="_blank">tomcat_EM7.zip</a>
 
-## Linux系统打开文件数
+### Linux系统打开文件数
 
 命令行执行
 ```
@@ -271,7 +271,7 @@
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/f9d0c90fe0aa3.png)
 
 
-## 查找nginx.conf路径,修改nginx.conf配置文件
+### 查找nginx.conf路径,修改nginx.conf配置文件
 
 1. 获取nginx可执行文件路径```ps -aux |grep nginx```
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/78e899350e9c0.png)
@@ -290,7 +290,7 @@
    
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/de0d9501b1362.png)
 
-## NTP时间同步
+### NTP时间同步
 
 
 1. 判断系统是否配置了ntp,执行命令```rpm -qa |grep ntp |wc -l```如果结果大于1,证明系统已安装ntpdate,如果结果为0证明未安装ntp,请使用命令```yum install -y ntpdate```
@@ -313,7 +313,7 @@
       
        ```*/10 * * * * /usr/sbin/ntpdate 10.10.25.25```
 
-## Resin XMX内存
+### Resin XMX内存
 
 1. Resin配置文件
    
@@ -326,20 +326,20 @@
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/99cf631b4b1bf.png)
 
 
-## SQL缓存
+### SQL缓存
 
 修改配置文件ecology/WEB-INF/prop/initCache.properties,设置iscache=1,如下图:
 
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/9bc0fd6ed8ca3.png)
 
 
-## DocSearch
+### DocSearch
 
 修改配置文件ecology/WEB-INF/prop/doc_full_search.properties配置文件，配置use_full_search=1 default_treenode=1,如下图:
 
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/0a43fa3084273.png)
 
-## 安全包状态（升级最新安全包）
+### 安全包状态（升级最新安全包）
 
 参考链接:
 
@@ -347,47 +347,47 @@
 
 [ecology安全包配置说明](https://www.e-cology.com.cn/spa/document/index.jsp?imagefileId=11804323&id=6589629&router=1#/main/document/detail?_key=zlt82l)
 
-## Ecode版本
+### Ecode版本
 
 升级Ecode至最新版本
 [Ecode下载地址](https://e-cloudstore.com/files/ecology_dev.zip)
-## Redis优化
+### Redis优化
 
 升级redis优化包
 <a href="assets/redis session优化.zip" target="_blank">redis session优化.zip</a>
 
-## MemMonitor优化
+### MemMonitor优化
 
 提交流程至性能组同事出包解决,修改ecology/src/weaver/monitor/monitor/MemMonitor.java
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/5496b5930435f.png)
 
-## E9限流包
+### E9限流包
 
 升级E9限流包
 [限流包](https://home.sunzhe.cc:89/d/应用限流最终版.zip)
 
-## E9防串号
+### E9防串号
 
 升级E9防串号补丁包
 [防串号](https://home.sunzhe.cc:89/d/e9防超时及串号最终版final.zip)
 
-## E9用户组织画像
+### E9用户组织画像
 
 如果未启用非标组织画像菜单，请在后台管理页面禁用如下计划任务
 [组织画像启用关闭SQL](https://home.sunzhe.cc:89/d/E9组织画像计划任务处理.rar)
 
-## E9Redis大key
+### E9Redis大key
 
 `请确保已经更新过Redis优化包`
 升级Redis大key补丁包
 [Redis大key补丁包](https://home.sunzhe.cc:89/d/解决大key以及耗性能key优化包ecology.zip)
 
-## Tomcat资源缓存
+### Tomcat资源缓存
 
 修改`/usr/emp/appsvr/tomcat/conf/context.xml`
 ![](https://home.sunzhe.cc:88/2022/04/13/4bd596764ecc2.png)
 
-## Linux 虚拟内存配置（内核参数）
+### Linux 虚拟内存配置（内核参数）
 
 1. 修改配置文件 `/etc/sysctl.conf`中`vm.swappiness=30`
 
@@ -401,7 +401,7 @@
 
 
 
-## Linux TCP 重用配置
+### Linux TCP 重用配置
 
    `当net.ipv4.tcp_tw_reuse设置为1时，会导致网络连接被拒绝`
 
@@ -413,7 +413,7 @@
 
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/c172548d2c676.png)
 
-## Linux TCP 快速回收
+### Linux TCP 快速回收
 
    `当net.ipv4.tcp_tw_recycle设置为1时，会导致网络连接被拒绝`
 
