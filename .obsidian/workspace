@@ -14,6 +14,16 @@
             "source": false
           }
         }
+      },
+      {
+        "id": "9bd3f219645397f0",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "docs/README.md"
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -77,6 +87,27 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8e7e42e9f3507e89",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cf1e2db52c57b158",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/README.md"
               }
             }
           }
