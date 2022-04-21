@@ -1,6 +1,4 @@
-- [巡检相关文档](/README.md)
-  - 巡检工具使用说明
-    - [巡检工具下载地址](/download.md)
-    - [巡检工具使用指南](/useages.md)
-  - [巡检项说明](/inspectitems.md)
-  - [巡检修复建议](/repair.md)
+
+- [巡检工具使用说明](/useages.md)
+- [巡检项说明](/inspectitems.md)
+- [巡检修复建议](/repair.md)

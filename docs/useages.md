@@ -1,3 +1,10 @@
+# 巡检相关文档
+
+> 泛微巡检说明
+
+## 巡检工具下载地址
+1. [windows](https://home.sunzhe.cc:89/d/windows-inspect.zip)
+2. [linux](https://home.sunzhe.cc:89/d/Linux-inspect.tar.gz)
 ### windows版本
 
 `不支持windows 2008,只支持2012以上操作系统`
