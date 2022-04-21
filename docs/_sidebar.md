@@ -1,4 +1,4 @@
-
+- [巡检相关](/useages.md)
 - [巡检工具使用说明](/useages.md)
 - [巡检项说明](/inspectitems.md)
 - [巡检修复建议](/repair.md)
