@@ -1,7 +1,3 @@
-# 巡检相关
-
-> 泛微巡检相关
-
 
 ## 巡检工具下载地址
 1. [windows](https://home.sunzhe.cc:89/d/windows-inspect.zip)

@@ -1,3 +1,4 @@
+# 巡检修复建议
 ## 设置URL编码
 
 1. 修改resin.conf或resin.xml
@@ -77,6 +78,7 @@
 ## 禁用Resin热部署
 
 <a href="assets/stophotdeploy.jar" target="_blank">stophotdeploy.jar</a>
+
 ### Resin4热部署补丁包操作
 
 1、停OA服务

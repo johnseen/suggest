@@ -1,2 +1,3 @@
-- [首页](/README.md)
-- [巡检相关](/README.md)
+- [首页](/)
+- [巡检工具使用指南](/README.md)
+- [巡检修复建议](/README.md)
