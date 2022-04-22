@@ -274,16 +274,20 @@
 ### 查找nginx.conf路径,修改nginx.conf配置文件
 
 1. 获取nginx可执行文件路径```ps -aux |grep nginx```
+
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/78e899350e9c0.png)
    
    如果可执行文件为"./nginx",则需要通过命令查找exe的绝对路径,如
+   
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/3f4039018945f.png)
 
 2. 使用第一步找到的nginx可执行为文件执行 ```/usr/sbin/nginx -t```,获取nginx配置文件,如下图:
+
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/341632a6c9c96.png)
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/ab165536312a8.png)
 
 3. 使用vi修改nginx配置文件,配置完成后使用```/usr/sbin/nginx -t```测试配置文件格式是否正确,如图:
+
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/bd1ec7c30398e.png)
 
 4. 重载nginx配置文件,```/usr/sbin/nginx -s reload```,如图:
@@ -384,7 +388,10 @@
 
 ### Tomcat资源缓存
 
-修改`/usr/emp/appsvr/tomcat/conf/context.xml`
+如果为EMP,修改`/usr/emp/appsvr/tomcat/conf/context.xml`
+如果为Ecology,修改`/usr/weaver/apache-tomcat-8.5.65/conf/context.xml`
+
+*路径请根据实际环境路径确定*
 ![](https://home.sunzhe.cc:88/2022/04/13/4bd596764ecc2.png)
 
 ### Linux 虚拟内存配置（内核参数）
