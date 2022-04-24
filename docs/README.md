@@ -113,15 +113,24 @@
   
   ![mysqlinspect.png](https://home.sunzhe.cc:88/2022/04/18/f478edd910a11.png)
 
-  #### Tomcat-Ecology巡检(适用于非resin中间件)
+  #### Tomcat-Ecology巡检(适用于Tomcat中间件)
 
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`8`,执行OA巡检,输入`参数(ecology路径,jdk路径,oa端口)`
+  2. 执行`sh menu.sh`,选择`8`,执行OA巡检,输入`参数(ecology路径,tomcat路径,jdk路径)`
   
-  ![simple-oa.png](https://home.sunzhe.cc:88/2022/04/18/80cdd55fc5c87.png)
+  ![](https://home.sunzhe.cc:88/2022/04/24/b5599aa4425d2.png)
+
+#### OtherOS-Ecology巡检(适用于非Redhat/Centos系列主机)
+
+  1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
+   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+
+  2. 执行`sh menu.sh`,选择`9`,执行OA巡检,输入`参数(ecology路径,Resin路径,jdk路径)`
+  ![](https://home.sunzhe.cc:88/2022/04/24/1526f504a7c8e.png)
 
 ## **巡检修复建议**
 ### 设置URL编码
