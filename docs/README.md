@@ -364,10 +364,9 @@
 
 升级Ecode至最新版本
 [Ecode下载地址](https://e-cloudstore.com/files/ecology_dev.zip)
-### Redis优化
 
-升级redis优化包
-<a href="assets/redis session优化.zip" target="_blank">redis session优化.zip</a>
+
+
 
 ### MemMonitor优化
 
@@ -389,11 +388,10 @@
 如果未启用非标组织画像菜单，请在后台管理页面禁用如下计划任务
 [组织画像启用关闭SQL](https://home.sunzhe.cc:89/d/E9组织画像计划任务处理.rar)
 
-### E9Redis大key
+### E9Redis大key && Redis优化
 
-`请确保已经更新过Redis优化包`
 升级Redis大key补丁包
-[Redis大key补丁包](https://home.sunzhe.cc:89/d/解决大key以及耗性能key优化包ecology.zip)
+[Redis大key补丁包](https://home.sunzhe.cc:89/d/redissession以及大key优化.zip)
 
 ### Tomcat资源缓存
 
