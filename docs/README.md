@@ -680,3 +680,62 @@
 27.	操作系统架构
 28.	操作系统内核版本号
 29.	操作系统时区
+
+### 数据库相关
+
+#### Oracle
+1. ECOLOGY用户状态要正常,没有设置过期时间
+2. 数据库参数检查-OPEN_CURSORS>=1000
+3. Online Redo文件大小 >=512MB,Group数>=6,Member 至少2个镜像
+4. COLOGY表空间使用率低于85%,最大剩余空间大于5120MB
+5. 数据库参数检查-_allow_level_without_connect_by=TRUE
+6. 数据库参数检查-_serial_direct_read=NEVER
+7. 数据库参数检查-_result_cache_mode=MANUAL
+8. 数据库参数检查-_optimizer_ads_use_result_cache=FALSE
+9. 数据库参数检查-_optimizer_dsdir_usage_control=0
+10. 数据库参数检查-optimizer_adaptive_features=FALSE
+11. 数据库参数检查-_sql_plan_directive_mgmt_control=0
+12. 数据库OS配置检查-HugePages>SGA_MAX_SIZE/Hugepagesize
+13. 数据库OS配置检查-CPUS>=32CORE
+14. 数据库OS配置检查-MEMORY>62G
+15. RecycleBin回收站记录数<=2000
+16. 数据库文件状态为AVALIABLE,ONLINE_STATUS为ONLINE或SYSTEM
+17. 数据库参数检查-PROCESSES>=2000
+18. 数据库参数检查-PGA>6G
+19. 数据库参数检查-SGA_TARGET>12G
+20. 数据库参数检查-SESSION_CACHED_CURSORS>=300
+21. 数据库可读写,运行于归档模式,所有实例正常OPEN
+
+ #### MYSQL
+ 
+1. log_bin
+2. slow_query_log
+3. innodb_buffer_pool_instances
+4. max_allowed_packet
+5. innodb_flush_log_at_trx_commit
+6. log_bin_trust_function_creators
+7. sync_binlog
+8. max_connections
+9. sql_mode
+10. innodb_buffer_pool_size
+11. innodb_large_prefix
+12. group_concat_max_len
+13. transaction_isolation
+14. innodb_thread_concurrency
+15. lower_case_table_names
+16. expire_logs_days
+17. binlog_format
+
+#### SQLServer
+1. 事务隔离级别检查(is_read_committed_snapshot_on=1)
+2. 事务日志大小检查(<30720M)
+3. License检查
+4. 数据库版本检查
+5. 用户密码过期检查(is_expiration_checked=0)
+6. 数据库磁盘空闲空间(>=300GB)
+7. 数据文件扩展检查(is_percent_growth)
+8. 日志文件扩展检查(is_percent_growth=0)
+9. 数据库备份检查
+10. 内存检查(>=16G)
+11. CPU核数检查(>=8)
+12. 字符集相关检查(Chinese_PRC_CI_AS)
