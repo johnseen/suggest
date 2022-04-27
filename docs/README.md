@@ -209,6 +209,16 @@
 
 **本文部分图片来自https://blog.csdn.net/meigang2012/article/details/77505485**
 
+### 禁用Windows Defender
+
+[关闭 Windows 安全中心中的Defender 防病毒保护 (microsoft.com)](https://support.microsoft.com/zh-cn/windows/%E5%85%B3%E9%97%AD-windows-%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83%E4%B8%AD%E7%9A%84defender-%E9%98%B2%E7%97%85%E6%AF%92%E4%BF%9D%E6%8A%A4-99e6004f-c54c-8509-773c-a4d776b77960)
+
+#### 更改`/usr/emp/work/logs/mysqllog/mysqlerr.log`属主
+
+`请确保emp为root安装,且mysql在当前主机,未单独部署,执行以下命令`
+
+`chown mysql:mysql /usr/emp/work/logs/mysqllog/mysqlerr.log`
+
 ### 禁用Resin热部署
 
 <a href="assets/stophotdeploy.jar" target="_blank">stophotdeploy.jar</a>
