@@ -315,6 +315,163 @@
    
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/de0d9501b1362.png)
 
+**Nginx参考文件(HTTP)**
+`根据以下配置文件进行修改,若没有则新增`
+
+
+
+```
+# user  root root;
+worker_processes  4; # 如果CPU核数小于8,则配置4,大于8配置8,最高不超过8
+worker_cpu_affinity auto; #巡检不通过请修改此配置
+
+error_log  logs/error.log;
+# error_log  logs/error.log  notice;
+# error_log  logs/error.log  info;
+
+# pid        logs/nginx.pid;
+
+worker_rlimit_nofile 65535;
+events {
+	worker_connections  10240;
+	use epoll; #巡检提示UseEpoll,请加入此配置
+	
+}
+
+http {
+
+	upstream ecologyUpStream {
+		sticky name=ecologyUpStream;
+		server 127.0.0.1:80;
+		server 127.0.0.2:80;
+    }
+    
+	upstream emobileUpStream {
+		sticky name=emobileUpStream;
+		server 127.0.0.1:8999;
+		server 127.0.0.2:8999;
+	}
+	
+    upstream emessage7070UpStream {
+		sticky name=emessage7070UpStream;
+		server 127.0.0.1:7070;
+		server 127.0.0.2:7070;
+    }
+
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+    # tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+	server_tokens  off;
+
+    client_max_body_size 1000M;
+    client_body_buffer_size 128K;
+	
+	
+	fastcgi_connect_timeout 300s;
+	fastcgi_send_timeout 300s;
+	fastcgi_read_timeout 300s;
+	fastcgi_buffer_size 128k;
+	fastcgi_buffers 8 128k;
+	fastcgi_busy_buffers_size 256k;
+	fastcgi_temp_file_write_size 256k;
+	fastcgi_intercept_errors on; 
+	
+	
+	server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+	        proxy_pass  http://ecologyUpStream;
+			proxy_read_timeout 3600; # 代理超时时间,每个localtion都需要新增
+			proxy_send_timeout 3600; # 代理超时时间,每个localtion都需要新增
+			proxy_buffer_size  128k;
+			proxy_buffers   32 32k;
+			proxy_busy_buffers_size 128k;
+			proxy_redirect   http:// $scheme://;
+
+            proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header  X-Real-IP  $remote_addr;
+            proxy_set_header  Host $http_host;
+
+			access_log off;
+		}
+    }
+
+
+	server {
+        listen       8999;
+        server_name  localhost;
+
+        location / {
+	        proxy_pass  http://emobileUpStream;
+			proxy_read_timeout 3600;
+			proxy_send_timeout 3600;
+			proxy_buffer_size  128k;
+			proxy_buffers   32 32k;
+			proxy_busy_buffers_size 128k;
+			proxy_redirect   http:// $scheme://;
+
+            proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header  X-Real-IP  $remote_addr;
+            proxy_set_header  Host $http_host;
+
+			access_log off;
+		}
+    }
+
+	
+    server {
+        listen       7070;
+        server_name  localhost;
+
+        location / {
+	        proxy_pass  http://emessage7070UpStream;
+			proxy_read_timeout 3600;
+			proxy_send_timeout 3600;
+			proxy_buffer_size  128k;
+			
+			#7070必备
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+			
+			proxy_buffers   32 32k;
+			proxy_busy_buffers_size 128k;
+			proxy_redirect   http:// $scheme://;
+
+            proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+            proxy_set_header  X-Real-IP  $remote_addr;
+            proxy_set_header  Host $http_host;
+
+			access_log off;
+		}
+    }
+}
+stream {
+    upstream emessage5222Upstream{
+		hash $remote_addr consistent;
+		server 127.0.0.1:5222;
+		server 127.0.0.2:5222;
+    }
+    server {
+		listen        5222;
+		
+		proxy_pass  emessage5222Upstream;
+		proxy_connect_timeout 2s;
+		proxy_timeout 360s;
+    }
+
+}
+```
+
+
+
 ### NTP时间同步
 
 
