@@ -94,7 +94,9 @@
   ![nginxinspect.png](https://home.sunzhe.cc:88/2022/04/18/9d6677723d12c.png)
 
   ####  Oracle巡检
-
+  
+  `请注意,若为Oracle集群,只需要巡检集群中一台即可`
+  
   1. 上传巡检脚本到Oracle服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
