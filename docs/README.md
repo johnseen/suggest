@@ -565,10 +565,19 @@ stream {
 ### Tomcat资源缓存
 
 如果为EMP,修改`/usr/emp/appsvr/tomcat/conf/context.xml`
-如果为Ecology,修改`/usr/weaver/apache-tomcat-8.5.65/conf/context.xml`
+如果为Ecology
+tomcat8修改`/usr/weaver/apache-tomcat-8.5.65/conf/context.xml`
+tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 
 *路径请根据实际环境路径确定*
+**tomcat8**
+
 ![](https://home.sunzhe.cc:88/2022/04/13/4bd596764ecc2.png)
+
+**tomcat9**
+
+![](https://home.sunzhe.cc:88/2022/05/06/804b3d10bd195.png)
+
 
 ### Linux 虚拟内存配置（内核参数）
 
