@@ -1,4 +1,10 @@
-
+## 巡检总体流程
+1. 提交新客户上线前巡检流程
+2. 此页面下载巡检工具收集数据
+	数据格式为 类型_Inspection-IP-日期.txt 例如`EMP_Inspection-10.10.27.160-202204271007.txt`
+3. 将收集到的数据放置到流程中
+4. 联系巡检人生成巡检报告
+5. 解压巡检报告压缩包,双击index.html查看巡检报告
 ## **巡检工具下载地址**
 1. [windows](https://home.sunzhe.cc:89/d/windows-inspect.zip)
 2. [linux](https://home.sunzhe.cc:89/d/Linux-inspect.tar.gz)
