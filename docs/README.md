@@ -553,10 +553,12 @@ stream {
 升级E9限流包
 [限流包](https://home.sunzhe.cc:89/d/应用限流最终版.zip)
 
-### E9防串号
+### E9防超时
 
-升级E9防串号补丁包
-[防串号](https://home.sunzhe.cc:89/d/e9防超时及串号最终版final.zip)
+升级E9防超时补丁包
+[防超时](https://home.sunzhe.cc:89/d/e9防超时最终版final.zip)
+
+`原防串号补丁包`
 
 ### E9用户组织画像
 
@@ -575,6 +577,12 @@ stream {
 tomcat8修改`/usr/weaver/apache-tomcat-8.5.65/conf/context.xml`
 tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 
+```xml
+<Resources  
+      cachingallowed="true"  
+      cacheMaxSize="10000"  
+     />
+```
 *路径请根据实际环境路径确定*
 **tomcat8**
 
