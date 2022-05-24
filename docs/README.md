@@ -592,7 +592,7 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 
 ![](https://home.sunzhe.cc:88/2022/05/06/804b3d10bd195.png)
 
-#### ResinSavesession
+### ResinSavesession
 
 修改`ecology/WEB-INF/resin-web.xml`中`always-save-session`为`false`
 
