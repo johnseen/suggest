@@ -6,7 +6,7 @@
 4. 联系巡检人生成巡检报告
 5. 解压巡检报告压缩包,双击index.html查看巡检报告
 
-`若有疑问,请先查看左侧页面的常见问题`
+**`若有疑问,请先查看左侧页面的常见问题`**
 
 ## **巡检工具下载地址**
 
@@ -642,7 +642,7 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 ### 1. 数据库巡检修复说明
 `所有数据库巡检不通过项都需要提交流程至DBA处处理`
 
-### 2. Redis密码怎么查看?
+### 2. Redis密码如何查看?
 如果为`OA`使用Redis,请查看`ecology/WEB-INF/prop/weaver_new_session.properties`
 
 ![](https://home.sunzhe.cc:88/2022/06/09/cb5f794f074f1.png)
@@ -654,10 +654,10 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 ### 3. 是否可以修改生成的巡检文件名?
 `请勿修改生成的巡检文件的文件名,分析工具依赖文件名称判断巡检类型`
 
-### 4. EMP使用的MySQL是否需要巡检? 
-不需要巡检EMP自带MySQL,自带MySQL已经过DBA优化了,是最佳参数
+### 4. EMP使用的MySQL,Redis是否需要巡检? 
+不需要巡检EMP自带MySQL和Redis,自带MySQL,Redis已经过优化了,是最佳参数
 
-### 5. 数据库巡检账号密码如果查看? 
+### 5. 数据库巡检账号密码如何查看? 
 `所有数据库账号密码都可以在weaver.properties中找到`,使用的账号密码都是数据库本身的账号密码,与服务器无关
 MySQL巡检建议使用`root`账号
 SQLServer巡检建议使用`sa`账号
