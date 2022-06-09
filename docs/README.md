@@ -634,6 +634,32 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 2. 命令行执行`sysctl -p`使配置生效
 
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/05dd06825b15b.png)
+## **常见问题**
+### 1. 数据库巡检修复说明
+`所有数据库巡检不通过项都需要提交流程至DBA处处理`
+
+### 2. Redis密码怎么查看?
+如果为`OA`使用Redis,请查看`ecology/WEB-INF/prop/weaver_new_session.properties`
+![](https://home.sunzhe.cc:88/2022/06/09/cb5f794f074f1.png)
+
+如果为`EMP`,请查看`/usr/emp/work/config/application-custom.properties`
+![](https://home.sunzhe.cc:88/2022/06/09/8f7df42e6eacd.png)
+
+### 3. 是否可以修改生成的巡检文件名?
+`请勿修改生成的巡检文件的文件名,分析工具依赖文件名称判断巡检类型`
+
+### 4. EMP使用的MySQL是否需要巡检? 
+不需要巡检EMP自带MySQL,自带MySQL已经过DBA优化了,是最佳参数
+
+### 5. 数据库巡检账号密码如果查看? 
+`所有数据库账号密码都可以在weaver.properties中找到`,使用的账号密码都是数据库本身的账号密码,与服务器无关
+MySQL巡检建议使用`root`账号
+SQLServer巡检建议使用`sa`账号
+Oracle巡检使用OA使用的用户,比如`ecology`,请以weaver.properties中`ecology.user`为准
+
+### 6. 有哪些主机不需要巡检? 
+目前除了Ecology,EMP,Nginx,Oracle,MySQL,SQLServer,Redis巡检支持以外,其他主机皆不支持巡检比如`WPS(非OA)`,`Ebridge(老系统)`,`ESearch`,`Elasticsearch`,`契约所`,`文件服务器`
+
 
 
 ## **巡检项说明**
