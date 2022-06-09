@@ -5,7 +5,11 @@
 3. 将收集到的数据放置到流程中
 4. 联系巡检人生成巡检报告
 5. 解压巡检报告压缩包,双击index.html查看巡检报告
+
+`若有疑问,请先查看左侧页面的常见问题`
+
 ## **巡检工具下载地址**
+
 1. [windows](https://home.sunzhe.cc:89/d/windows-inspect.zip)
 2. [linux](https://home.sunzhe.cc:89/d/Linux-inspect.tar.gz)
 
