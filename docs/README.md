@@ -640,9 +640,11 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 
 ### 2. Redis密码怎么查看?
 如果为`OA`使用Redis,请查看`ecology/WEB-INF/prop/weaver_new_session.properties`
+
 ![](https://home.sunzhe.cc:88/2022/06/09/cb5f794f074f1.png)
 
 如果为`EMP`,请查看`/usr/emp/work/config/application-custom.properties`
+
 ![](https://home.sunzhe.cc:88/2022/06/09/8f7df42e6eacd.png)
 
 ### 3. 是否可以修改生成的巡检文件名?
@@ -658,7 +660,7 @@ SQLServer巡检建议使用`sa`账号
 Oracle巡检使用OA使用的用户,比如`ecology`,请以weaver.properties中`ecology.user`为准
 
 ### 6. 有哪些主机不需要巡检? 
-目前除了Ecology,EMP,Nginx,Oracle,MySQL,SQLServer,Redis巡检支持以外,其他主机皆不支持巡检比如`WPS(非OA)`,`Ebridge(老系统)`,`ESearch`,`Elasticsearch`,`契约所`,`文件服务器`
+目前除了`Ecology`,`EMP`,`Nginx`,`Oracle`,`MySQL`,`SQLServer`,`Redis`巡检支持以外,其他主机皆不支持巡检比如`WPS(非OA)`,`Ebridge(老系统)`,`ESearch`,`Elasticsearch`,`契约所`,`文件服务器`
 
 
 
