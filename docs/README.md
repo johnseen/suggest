@@ -485,7 +485,7 @@ stream {
 ### NTP时间同步
 
 
-1. 判断系统是否配置了ntp,执行命令```rpm -qa |grep ntp |wc -l```如果结果大于1,证明系统已安装ntpdate,如果结果为0证明未安装ntp,请使用命令```yum install -y ntpdate```
+1. 判断系统是否配置了ntp,执行命令```rpm -qa |grep ntp |wc -l```如果结果`大于等于1`,证明系统已安装ntpdate,如果结果为0证明未安装ntp,请使用命令```yum install -y ntpdate```
    
    ![avatar](https://home.sunzhe.cc:88/2022/04/18/5fa38ffd3a155.png)
 
@@ -557,7 +557,7 @@ stream {
 升级E9限流包
 [限流包](https://home.sunzhe.cc:89/d/应用限流最终版.zip)
 
-### E9防超时
+### E9防超时(原防串号补丁包)
 
 升级E9防超时补丁包
 [防超时](https://home.sunzhe.cc:89/d/e9防超时最终版final.zip)
@@ -667,7 +667,8 @@ Oracle巡检使用OA使用的用户,比如`ecology`,请以weaver.properties中`e
 目前除了`Ecology`,`EMP`,`Nginx`,`Oracle`,`MySQL`,`SQLServer`,`Redis`巡检支持以外,其他主机皆不支持巡检比如`WPS(非OA)`,`Ebridge(老系统)`,`ESearch`,`Elasticsearch`,`契约所`,`文件服务器`
 
 
-
+### 7. 补丁包覆盖是否有顺序要求? 
+`从此网址下载的补丁包,覆盖无顺序要求,比如Redis优化包,限流包,防超时包`
 ## **巡检项说明**
 ### OA相关
 1.	主机名到IP解析
