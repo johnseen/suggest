@@ -53,15 +53,15 @@
 
   1. 上传巡检脚本到服务器,任意位置(建议/tmp),创建巡检目录并解压
   
-  `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+  `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
   2. 使用shell运行脚本 `sh menu.sh`,选择需要巡检的项目,暂时支持单主机巡检,OA巡检,EMP巡检(`EM7 不支持老EM,比如EM6,Ebridge,emessage等`),Redis巡检,Nginx巡检,Oracle巡检,MySQL巡检,单OA巡检(`适用于非Resin中间件,比如tomcat,东方通等`)
-  
-  ![memu.png](https://home.sunzhe.cc:88/2022/04/18/4889fd421ba9d.png)
+![](https://home.sunzhe.cc:88/2022/06/20/16cdb7266a54d.png)
 
-  3. 选择`2`,执行OA巡检,如下:
-   
-   ![oainspect.png](https://home.sunzhe.cc:88/2022/04/18/9f436efb20242.png)
+  3. 选择`1`,执行OA巡检,如下:
+   ![](https://home.sunzhe.cc:88/2022/06/20/85bef01098baa.png)
+
+
 
   `输入oa,resin,jdk路径,如果与default一致,回车即可`
 
@@ -77,31 +77,33 @@
 
   1. 上传巡检脚本到EMP服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`3`,执行EMP巡检,输入安装路径,默认为`/usr/emp`
+  2. 执行`sh menu.sh`,选择`2`,执行EMP巡检,输入安装路径,默认为`/usr/emp`
   
-  ![emptest.png](https://home.sunzhe.cc:88/2022/04/18/2903ab925324c.png)
+![](https://home.sunzhe.cc:88/2022/06/20/ba5ac0ba552f5.png)
+
 
   #### Redis巡检
 
   1. 上传巡检脚本到Redis服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`4`,执行Redis巡检,输入Redis端口,密码
+  2. 执行`sh menu.sh`,选择`3`,执行Redis巡检,输入Redis端口,密码
   
-  ![redisinspect.png](https://home.sunzhe.cc:88/2022/04/18/278a061fe1083.png)
+
 
   #### Nginx巡检
 
    1. 上传巡检脚本到Nginx服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`5`,执行Nginx巡检,输入`Nginx可执行文件路径`
+  2. 执行`sh menu.sh`,选择`4`,执行Nginx巡检,输入`Nginx可执行文件路径`
   
-  ![nginxinspect.png](https://home.sunzhe.cc:88/2022/04/18/9d6677723d12c.png)
+  ![](https://home.sunzhe.cc:88/2022/06/20/17d26b185b971.png)
+
 
   ####  Oracle巡检
   
@@ -109,40 +111,52 @@
   
   1. 上传巡检脚本到Oracle服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`6`,执行Oracle巡检,输入`OA使用的用户名`
+  2. 执行`sh menu.sh`,选择`5`,执行Oracle巡检,输入`OA使用的用户名`
   
-  ![oracleinspect.png](https://home.sunzhe.cc:88/2022/04/18/7f827ec5b12b1.png)
+  ![](https://home.sunzhe.cc:88/2022/06/20/241226a1520d3.png)
+
 
   ####  MySQL巡检
 
   1. 上传巡检脚本到MySQL服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`7`,执行MySQL巡检,输入`参数(账号,密码,主机,端口)`
+  2. 执行`sh menu.sh`,选择`6`,执行MySQL巡检,输入`参数(账号,密码,主机,端口)`
   
-  ![mysqlinspect.png](https://home.sunzhe.cc:88/2022/04/18/f478edd910a11.png)
+  ![](https://home.sunzhe.cc:88/2022/06/20/5da92d8574df9.png)
+
 
   #### Tomcat-Ecology巡检(适用于Tomcat中间件)
 
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`8`,执行OA巡检,输入`参数(ecology路径,tomcat路径,jdk路径)`
+  2. 执行`sh menu.sh`,选择`7`,执行OA巡检,输入`参数(ecology路径,tomcat路径,jdk路径)`
   
-  ![](https://home.sunzhe.cc:88/2022/04/24/b5599aa4425d2.png)
+ ![](https://home.sunzhe.cc:88/2022/06/20/67208653f5fc3.png)
+
 
 #### OtherOS-Ecology巡检(适用于非Redhat/Centos系列主机)
 
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
    
-   `mkdir inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
 
-  2. 执行`sh menu.sh`,选择`9`,执行OA巡检,输入`参数(ecology路径,Resin路径,jdk路径)`
-  ![](https://home.sunzhe.cc:88/2022/04/24/1526f504a7c8e.png)
+  2. 执行`sh menu.sh`,选择`8`,执行OA巡检,输入`参数(ecology路径,Resin路径,jdk路径)`
+  ![](https://home.sunzhe.cc:88/2022/06/20/7ae4d638a5137.png)
+
+#### NFS巡检
+  1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
+   
+   `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
+   2.  执行`sh menu.sh`,选择`9`,执行NFS巡检
+![](https://home.sunzhe.cc:88/2022/06/20/a42ef2c9f3531.png)
+
+
 
 ## **巡检修复建议**
 ### 设置URL编码
