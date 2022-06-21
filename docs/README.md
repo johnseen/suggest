@@ -59,8 +59,8 @@
 ![](https://home.sunzhe.cc:88/2022/06/20/16cdb7266a54d.png)
 
   3. 选择`1`,执行OA巡检,如下:
-   ![](https://home.sunzhe.cc:88/2022/06/20/85bef01098baa.png)
 
+   ![](https://home.sunzhe.cc:88/2022/06/20/85bef01098baa.png)
 
 
   `输入oa,resin,jdk路径,如果与default一致,回车即可`
@@ -154,6 +154,7 @@
    
    `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
    2.  执行`sh menu.sh`,选择`9`,执行NFS巡检
+
 ![](https://home.sunzhe.cc:88/2022/06/20/a42ef2c9f3531.png)
 
 
