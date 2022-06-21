@@ -652,6 +652,23 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 2. 命令行执行`sysctl -p`使配置生效
 
 ![avatar](https://home.sunzhe.cc:88/2022/04/18/05dd06825b15b.png)
+
+
+### OA开机自启
+1. 追加启动脚本到`/etc/rc.d/rc.local`,执行下面命令   `echo "/usr/weaver/Resin4/bin/startresin.sh" >> /etc/rc.d/rc.local`
+
+   *请将/usr/wever/Resin4替换为客户本身OA安装目录*
+2. 授权`/etc/rc.d/rc.local`
+
+	`chmod 755 /etc/rc.d/rc.local`
+
+### Abrtd服务状态
+Abrtd为红帽自动报告bug系统,需要禁用,若不禁用,在报告Bug时,会自动杀死OA进程,导致宕机
+
+禁用命令
+`systemctl stop abrtd && systemctl disable abrtd`
+
+
 ## **常见问题**
 ### 1. 数据库巡检修复说明
 `所有数据库巡检不通过项都需要提交流程至DBA处处理`
