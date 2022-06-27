@@ -158,6 +158,18 @@
 ![](https://home.sunzhe.cc:88/2022/06/20/a42ef2c9f3531.png)
 
 
+## **巡检自动修复工具使用说明**
+`只支持Linux版本,不支持Windows`
+
+### 下载地址如下
+[自动修复脚本](https://home.sunzhe.cc:89/d/AutoRepair.tar.gz)
+
+### 使用方式
+1. 上传修复脚本到服务器`/tmp`目录,执行命令`mkdir -p autorepair && tar -zxvf AutoRepair.tar.gz  -C autorepair`
+2. 执行`sh menu.sh`,选择修复`1`修复`服务器不通过项`,选择`2`修复`OA不通过项`(*请注意,OA修复不会自动打包,请手动打包,暂不支持其他周边服务修复,比如Nginx,Redis等,只针对OA,其他服务器可以使用服务器巡检修复*)
+
+![](https://home.sunzhe.cc:88/2022/06/27/1fe9f763186d9.png)
+
 
 ## **巡检修复建议**
 ### 设置URL编码
