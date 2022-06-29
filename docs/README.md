@@ -611,7 +611,7 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 ```xml
 <Resources  
       cachingallowed="true"  
-      cacheMaxSize="10000"  
+      cacheMaxSize="100000"  
      />
 ```
 *路径请根据实际环境路径确定*
