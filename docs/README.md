@@ -711,12 +711,31 @@ Oracle巡检使用OA使用的用户,比如`ecology`,请以weaver.properties中`e
 目前除了`Ecology`,`EMP`,`Nginx`,`Oracle`,`MySQL`,`SQLServer`,`Redis`巡检支持以外,其他主机皆不支持巡检比如`WPS(非OA)`,`Ebridge(老系统)`,`ESearch`,`Elasticsearch`,`契约所`,`文件服务器`
 
 
+
 ### 7. 补丁包覆盖是否有顺序要求? 
 `从此网址下载的补丁包,覆盖无顺序要求,比如Redis优化包,限流包,防超时包`
 
 ### 8. Redis优化补丁包在哪台主机上打?
 
 *所有补丁包都是针对OA的,请在OA服务器上打包*
+
+### 9. 配置巡检URL,集群检测URL白名单
+
+在客户集成CAS情况下,需要配置以下2个地址白名单,如果不是集群,无需配置`ecology`
+	1. `/security/monitor/MonitorStatusForServer.jsp`
+	2. `ecologyClusterConfigCheck.jsp`
+*配置方法如下*
+1. sysadmin登陆系统,转到后台-集成-统一认证中心-通用白名单
+![](https://home.sunzhe.cc:88/2022/06/29/2073415689187.png)
+2. 新建白名单
+![](https://home.sunzhe.cc:88/2022/06/29/aa4be92f43515.png)
+3. 修改过滤器白名单,添加上一步添加的`/security/monitor/MonitorStatusForServer.jsp`地址
+![](https://home.sunzhe.cc:88/2022/06/29/dde94862792d9.png)
+![](https://home.sunzhe.cc:88/2022/06/29/31a12f38ff3d1.png)
+![](https://home.sunzhe.cc:88/2022/06/29/45db540d0c122.png)
+![](https://home.sunzhe.cc:88/2022/06/29/6b98d48ab9355.png)
+
+
 
 ## **巡检项说明**
 ### OA相关
