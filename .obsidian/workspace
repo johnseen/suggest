@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "防超时",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,7 +59,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -120,11 +121,11 @@
   },
   "active": "8359f48445b2e911",
   "lastOpenFiles": [
+    "docs/useages.md",
     "docs/README.md",
     "README.md",
     "docs/repair.md",
     "docs/inspectitems.md",
-    "docs/useages.md",
     "==.md",
     "docs/_sidebar.md",
     "docs/download.md"

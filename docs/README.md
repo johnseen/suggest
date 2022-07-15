@@ -587,7 +587,7 @@ stream {
 ### E9防超时(原E9防串号)
 
 升级E9防超时补丁包
-[防超时](https://home.sunzhe.cc:89/d/e9防超时最终版final.zip)
+[防超时](https://home.sunzhe.cc:89/d/防止超时包最终版0630.rar)
 
 `原防串号补丁包`
 
