@@ -678,9 +678,15 @@ tomcat9修改`/usr/weaver/apache-tomcat-9.0.46/conf/server.xml`
 ### Abrtd服务状态
 Abrtd为红帽自动报告bug系统,需要禁用,若不禁用,在报告Bug时,会自动杀死OA进程,导致宕机
 
-禁用命令
+禁用命令(centos7)
 `systemctl stop abrtd && systemctl disable abrtd`
+禁用命令(centos6)
+`service abrtd stop && chkconfig abrtd off`
 
+### Tomcat热加载
+修改`tomcat/conf/server.xml`
+
+![avatar](https://s1.vika.cn/space/2022/07/08/8d5df8acb5074f55804a6319d51f441a?attname=image.png)
 
 ## **常见问题**
 ### 1. 数据库巡检修复说明
