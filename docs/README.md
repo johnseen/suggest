@@ -30,11 +30,10 @@
 
 ![Pasted_image_20220105120956.png](https://home.sunzhe.cc:88/2022/04/18/3923fdf2d2e43.png)
 
-4.  配置完成开始运行start.bat如下：
+4.  配置完成`双击OAInspect.exe`如下：
+![](https://home.sunzhe.cc:88/2022/08/29/0782eeb58d9ab.png)
 
-![Pasted_image_20220105121007.png](https://home.sunzhe.cc:88/2022/04/18/3e0e7207816a9.png)
 
-![Pasted_image_20220105121020.png](https://home.sunzhe.cc:88/2022/04/18/ac6dbf4ca2bc2.png)
 
 5. 运行完成后，会在本地weaver路径生成一个”客户名”_Windows2021-08-05-13-31_192.168.81.75_WEAVERZHE.json,请将本文件，附到巡检流程里面
 
@@ -42,7 +41,12 @@
 
 6. SQLserver巡检说明`注意一定要放置到SQLServer主机上,不能放置到OA主机上`
 
-![Pasted_image_20220105121035.png](https://home.sunzhe.cc:88/2022/04/18/39bf52f0b70e1.png)
+![](https://home.sunzhe.cc:88/2022/08/29/0cf4580f75114.png)
+
+![](https://home.sunzhe.cc:88/2022/08/29/ce253e3de841e.png)
+![](https://home.sunzhe.cc:88/2022/08/29/1ade9e11c0398.png)
+![](https://home.sunzhe.cc:88/2022/08/29/3b5235a324717.png)
+
 
 
 `因服务器负载和配置有差异，bat窗口的运行时间可能会长会短，请耐心等待，最长不超过5分钟，如果无响应请按回车键,oa巡检,请将巡检脚本放置到oa主机上,sqlserver巡检请将巡检脚本放置到sqlserver主机上`
