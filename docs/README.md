@@ -157,7 +157,7 @@
   ![](https://home.sunzhe.cc:88/2022/06/20/7ae4d638a5137.png)
 
 #### NFS巡检
-  1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
+  1. 上传巡检脚本到NFS服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
    2.  执行`sh menu.sh`,选择`9`,执行NFS巡检
