@@ -8,6 +8,8 @@
 
 **`若有疑问,请先查看左侧页面的常见问题`**
 
+**`巡检无需停止OA服务,且不可停止OA服务,巡检脚本会调用OA接口查询数据`**
+
 ## **巡检工具下载地址**
 
 1. [windows](https://home.sunzhe.cc:89/d/windows-inspect.zip)
@@ -80,7 +82,7 @@
 
   #### EMP巡检
 
-  `注意,EMP会自动巡检EMP所用Redis,MySQL,请勿重复执行巡检脚本,巡检redis,mysql`
+  `*注意,EMP会自动巡检EMP所用Redis,MySQL,请勿重复执行巡检脚本,巡检redis,mysql*`
 
   1. 上传巡检脚本到EMP服务器,任意位置(建议/tmp),创建巡检目录并解压
    
@@ -147,7 +149,7 @@
  ![](https://home.sunzhe.cc:88/2022/06/20/67208653f5fc3.png)
 
 
-#### OtherOS-Ecology巡检(适用于非Redhat/Centos系列主机)
+#### OtherOS-Ecology巡检(适用于非Redhat/Centos系列主机,容器化环境)
 
   1. 上传巡检脚本到OA服务器,任意位置(建议/tmp),创建巡检目录并解压
    
@@ -157,6 +159,8 @@
   ![](https://home.sunzhe.cc:88/2022/06/20/7ae4d638a5137.png)
 
 #### NFS巡检
+
+	*若无NFS主机,则不用巡检*
   1. 上传巡检脚本到NFS服务器,任意位置(建议/tmp),创建巡检目录并解压
    
    `mkdir -p inspect && tar -zxvf Linux-inspect.tar.gz -C inspect && cd inspect`
@@ -764,6 +768,12 @@ Oracle巡检使用OA使用的用户,比如`ecology`,请以weaver.properties中`e
 ![](https://home.sunzhe.cc:88/2022/06/29/31a12f38ff3d1.png)
 ![](https://home.sunzhe.cc:88/2022/06/29/45db540d0c122.png)
 ![](https://home.sunzhe.cc:88/2022/06/29/6b98d48ab9355.png)
+
+
+### 10. 巡检文件乱码
+
+建议使用xshell,并将编码设置为`GBK`
+![](https://home.sunzhe.cc:88/2022/10/28/fa6f902c9ca73.png)
 
 
 
