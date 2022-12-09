@@ -775,6 +775,15 @@ Oracle巡检使用OA使用的用户,比如`ecology`,请以weaver.properties中`e
 建议使用xshell,并将编码设置为`GBK`
 ![](https://home.sunzhe.cc:88/2022/10/28/fa6f902c9ca73.png)
 
+### 11. 补丁包覆盖是否有顺序要求
+
+巡检提示更新的补丁包覆盖均无顺序要求
+
+### 12. Redis优化补丁包在哪台主机上打
+
+在ecology所在主机上打包
+
+
 
 
 ## **巡检项说明**
